@@ -56,6 +56,8 @@
     
     self.progressView.frame = CGRectMake(10, 230, SCREEN_WIDTH-20, 80);
 //     [[UIProgressView appearanceWhenContainedIn:[RAYIndicatorViewController class], nil] setFrame:CGRectMake(10.0, 310.0, 300.0, 129.0)];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,7 +131,7 @@
     }
     
     [self.view addSubview:self.activityIndicator];
-    [self.activityIndicator setIndicatorView:@"come on baby!"];
+//    [self.activityIndicator setIndicatorView:@"come on baby!"];
     [self.activityIndicator startAnimating];
     self.activityIndicator.hidden = NO;
     isHidden = NO;
@@ -160,6 +162,7 @@
 
 //    [activityIndicator stopAnimating];
 }
+
 
 #pragma mark - getters and setters
 - (UIView *)transitionView {

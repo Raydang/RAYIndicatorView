@@ -9,7 +9,10 @@
 #import "ViewController.h"
 #import "RAYIndicatorViewController.h"
 
-@interface ViewController ()
+
+@interface ViewController (){
+    RAYTool *tool;
+}
 
 @property (nonatomic, strong)UIView *transitionView;
 
@@ -21,11 +24,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.view addSubview:self.transitionView];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.transitionView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,6 +92,14 @@
         
         UILabel *label = [[UILabel alloc]init];
         label.textAlignment = NSTextAlignmentCenter;
+        
+        
+        NSString *fonName = @"DFWaWaSC-W5";
+
+        
+        tool = [[RAYTool alloc]init];
+        [tool asynchronouslySetFontName:fonName];
+        label.font = [UIFont fontWithName:fonName size:14];
         label.text = @"向左⬅️滑动";
         label.bounds = CGRectMake(0, 0, 140, 50);
         label.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);

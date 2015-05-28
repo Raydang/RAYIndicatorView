@@ -19,6 +19,7 @@
 		71E2ED7F1B15B97900AAF1F7 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E2ED7E1B15B97900AAF1F7 /* 1.png */; };
 		71E2ED821B15C35B00AAF1F7 /* RAYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2ED811B15C35B00AAF1F7 /* RAYProgressView.m */; };
 		71E2ED851B15C98500AAF1F7 /* RAYIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2ED841B15C98500AAF1F7 /* RAYIndicatorView.m */; };
+		71E2ED881B16B83900AAF1F7 /* RAYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2ED871B16B83900AAF1F7 /* RAYTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		71E2ED811B15C35B00AAF1F7 /* RAYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAYProgressView.m; sourceTree = "<group>"; };
 		71E2ED831B15C98500AAF1F7 /* RAYIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAYIndicatorView.h; sourceTree = "<group>"; };
 		71E2ED841B15C98500AAF1F7 /* RAYIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAYIndicatorView.m; sourceTree = "<group>"; };
+		71E2ED861B16B83900AAF1F7 /* RAYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RAYTool.h; path = RAYIndicatorView/RAYTool.h; sourceTree = "<group>"; };
+		71E2ED871B16B83900AAF1F7 /* RAYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RAYTool.m; path = RAYIndicatorView/RAYTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 		71E2ED451B146E6200AAF1F7 = {
 			isa = PBXGroup;
 			children = (
+				71E2ED861B16B83900AAF1F7 /* RAYTool.h */,
+				71E2ED871B16B83900AAF1F7 /* RAYTool.m */,
 				71E2ED501B146E6200AAF1F7 /* RAYIndicatorView */,
 				71E2ED6A1B146E6200AAF1F7 /* RAYIndicatorViewTests */,
 				71E2ED4F1B146E6200AAF1F7 /* Products */,
@@ -249,6 +254,7 @@
 				71E2ED5A1B146E6200AAF1F7 /* ViewController.m in Sources */,
 				71E2ED571B146E6200AAF1F7 /* AppDelegate.m in Sources */,
 				71E2ED541B146E6200AAF1F7 /* main.m in Sources */,
+				71E2ED881B16B83900AAF1F7 /* RAYTool.m in Sources */,
 				71E2ED791B15943A00AAF1F7 /* RAYIndicatorViewController.m in Sources */,
 				71E2ED821B15C35B00AAF1F7 /* RAYProgressView.m in Sources */,
 				71E2ED851B15C98500AAF1F7 /* RAYIndicatorView.m in Sources */,
@@ -450,6 +456,7 @@
 				71E2ED731B146E6200AAF1F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71E2ED741B146E6200AAF1F7 /* Build configuration list for PBXNativeTarget "RAYIndicatorViewTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +465,7 @@
 				71E2ED761B146E6200AAF1F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

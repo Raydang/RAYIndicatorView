@@ -78,8 +78,8 @@
     if (_label == nil) {
         _label = [[UILabel alloc]initWithFrame:CGRectZero];
         _label.textAlignment = NSTextAlignmentCenter;
-        _label.font= [UIFont fontWithName:@"STHeitiSC-Light" size:14];
-        _label.text = @"请等待请等待请等待";
+        _label.font= [UIFont fontWithName:@"DFWaWaSC-W5" size:14];
+        _label.text = @"这个字体好看吧";
         _label.backgroundColor = [UIColor clearColor];
         _label.numberOfLines = 0;
         _label.textColor =[UIColor blackColor];

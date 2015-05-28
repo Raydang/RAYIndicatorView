@@ -19,6 +19,6 @@
 #endif
 
 #import "RAYIndicatorDefine.h"
-
+#import "RAYTool.h"
 
 #endif
