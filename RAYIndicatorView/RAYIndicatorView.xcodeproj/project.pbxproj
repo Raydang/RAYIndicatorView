@@ -14,6 +14,11 @@
 		71E2ED5F1B146E6200AAF1F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E2ED5E1B146E6200AAF1F7 /* Images.xcassets */; };
 		71E2ED621B146E6200AAF1F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71E2ED601B146E6200AAF1F7 /* LaunchScreen.xib */; };
 		71E2ED6E1B146E6200AAF1F7 /* RAYIndicatorViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2ED6D1B146E6200AAF1F7 /* RAYIndicatorViewTests.m */; };
+		71E2ED791B15943A00AAF1F7 /* RAYIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2ED781B15943A00AAF1F7 /* RAYIndicatorViewController.m */; };
+		71E2ED7D1B15B96F00AAF1F7 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E2ED7C1B15B96F00AAF1F7 /* 2.png */; };
+		71E2ED7F1B15B97900AAF1F7 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E2ED7E1B15B97900AAF1F7 /* 1.png */; };
+		71E2ED821B15C35B00AAF1F7 /* RAYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2ED811B15C35B00AAF1F7 /* RAYProgressView.m */; };
+		71E2ED851B15C98500AAF1F7 /* RAYIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2ED841B15C98500AAF1F7 /* RAYIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		71E2ED671B146E6200AAF1F7 /* RAYIndicatorViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RAYIndicatorViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E2ED6C1B146E6200AAF1F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71E2ED6D1B146E6200AAF1F7 /* RAYIndicatorViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAYIndicatorViewTests.m; sourceTree = "<group>"; };
+		71E2ED771B15943A00AAF1F7 /* RAYIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAYIndicatorViewController.h; sourceTree = "<group>"; };
+		71E2ED781B15943A00AAF1F7 /* RAYIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAYIndicatorViewController.m; sourceTree = "<group>"; };
+		71E2ED7A1B15950600AAF1F7 /* Define.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.pch; sourceTree = "<group>"; };
+		71E2ED7B1B15957100AAF1F7 /* RAYIndicatorDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAYIndicatorDefine.h; sourceTree = "<group>"; };
+		71E2ED7C1B15B96F00AAF1F7 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		71E2ED7E1B15B97900AAF1F7 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		71E2ED801B15C35B00AAF1F7 /* RAYProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAYProgressView.h; sourceTree = "<group>"; };
+		71E2ED811B15C35B00AAF1F7 /* RAYProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAYProgressView.m; sourceTree = "<group>"; };
+		71E2ED831B15C98500AAF1F7 /* RAYIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAYIndicatorView.h; sourceTree = "<group>"; };
+		71E2ED841B15C98500AAF1F7 /* RAYIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAYIndicatorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +96,24 @@
 		71E2ED501B146E6200AAF1F7 /* RAYIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
+				71E2ED7E1B15B97900AAF1F7 /* 1.png */,
+				71E2ED7C1B15B96F00AAF1F7 /* 2.png */,
 				71E2ED551B146E6200AAF1F7 /* AppDelegate.h */,
 				71E2ED561B146E6200AAF1F7 /* AppDelegate.m */,
 				71E2ED581B146E6200AAF1F7 /* ViewController.h */,
 				71E2ED591B146E6200AAF1F7 /* ViewController.m */,
+				71E2ED771B15943A00AAF1F7 /* RAYIndicatorViewController.h */,
+				71E2ED781B15943A00AAF1F7 /* RAYIndicatorViewController.m */,
+				71E2ED801B15C35B00AAF1F7 /* RAYProgressView.h */,
+				71E2ED811B15C35B00AAF1F7 /* RAYProgressView.m */,
+				71E2ED831B15C98500AAF1F7 /* RAYIndicatorView.h */,
+				71E2ED841B15C98500AAF1F7 /* RAYIndicatorView.m */,
 				71E2ED5B1B146E6200AAF1F7 /* Main.storyboard */,
 				71E2ED5E1B146E6200AAF1F7 /* Images.xcassets */,
 				71E2ED601B146E6200AAF1F7 /* LaunchScreen.xib */,
 				71E2ED511B146E6200AAF1F7 /* Supporting Files */,
+				71E2ED7A1B15950600AAF1F7 /* Define.pch */,
+				71E2ED7B1B15957100AAF1F7 /* RAYIndicatorDefine.h */,
 			);
 			path = RAYIndicatorView;
 			sourceTree = "<group>";
@@ -199,8 +224,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E2ED7F1B15B97900AAF1F7 /* 1.png in Resources */,
 				71E2ED5D1B146E6200AAF1F7 /* Main.storyboard in Resources */,
 				71E2ED621B146E6200AAF1F7 /* LaunchScreen.xib in Resources */,
+				71E2ED7D1B15B96F00AAF1F7 /* 2.png in Resources */,
 				71E2ED5F1B146E6200AAF1F7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +249,9 @@
 				71E2ED5A1B146E6200AAF1F7 /* ViewController.m in Sources */,
 				71E2ED571B146E6200AAF1F7 /* AppDelegate.m in Sources */,
 				71E2ED541B146E6200AAF1F7 /* main.m in Sources */,
+				71E2ED791B15943A00AAF1F7 /* RAYIndicatorViewController.m in Sources */,
+				71E2ED821B15C35B00AAF1F7 /* RAYProgressView.m in Sources */,
+				71E2ED851B15C98500AAF1F7 /* RAYIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +377,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RAYIndicatorView/Define.pch;
 				INFOPLIST_FILE = RAYIndicatorView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +389,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = RAYIndicatorView/Define.pch;
 				INFOPLIST_FILE = RAYIndicatorView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
