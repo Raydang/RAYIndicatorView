@@ -7,11 +7,12 @@
 //
 
 #import "RAYIndicatorViewController.h"
+#import "RAYIndicatorView.h"
 
 @interface RAYIndicatorViewController (){
     NSTimer *timer;
-    
-    UIActivityIndicatorView *activityIndicator;
+    BOOL    isHidden;
+
 }
 
 @property (nonatomic, strong)UIView *transitionView;
@@ -21,6 +22,8 @@
 @property (nonatomic, strong)UIButton *networkIndicatorButton;
 
 @property (nonatomic, strong)UIProgressView *progressView;
+
+@property (nonatomic, strong)RAYIndicatorView *activityIndicator;
 
 @end
 
@@ -39,6 +42,8 @@
     [self.view addSubview:self.networkIndicatorButton];
     
     [self.view addSubview:self.progressView];
+    
+    isHidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -50,14 +55,8 @@
     self.networkIndicatorButton.frame = CGRectMake(10, 170, SCREEN_WIDTH-20, 40);
     
     self.progressView.frame = CGRectMake(10, 230, SCREEN_WIDTH-20, 80);
-    
+//     [[UIProgressView appearanceWhenContainedIn:[RAYIndicatorViewController class], nil] setFrame:CGRectMake(10.0, 310.0, 300.0, 129.0)];
 }
-//- (void)viewDidAppear:(BOOL)animated {
-//    [super viewDidAppear:animated];
-//    [UIView animateWithDuration:1 animations:^{
-//        [[UIProgressView appearanceWhenContainedIn:[RAYIndicatorViewController class], nil] setFrame:CGRectMake(10.0, 310.0, 300.0, 129.0)];
-//    } completion:nil];
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -114,11 +113,7 @@
 - (void)showProgress {
     if(self.progressView.progress != 0){
         [timer invalidate];
-        
-//        self.progressView.progress = 0;
         [self.progressView setProgress:0 animated:YES];
-
-        
     }
     else{
         timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(runProgress) userInfo:nil repeats:YES];
@@ -127,25 +122,25 @@
 }
 
 - (void) showIndicator {
+    if (!isHidden) {
+        self.activityIndicator.hidden = YES;
+        isHidden = YES;
+        return;
+    }
     
-    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-//    activityIndicator.bounds = CGRectMake(0, 0, 100, 100);
-//    activityIndicator.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
-    activityIndicator.frame = CGRectMake(10, 260, SCREEN_WIDTH-20, 80);
-    //    activityIndicator.hidesWhenStopped = YES;
-    [self.view addSubview:activityIndicator];
-    [activityIndicator startAnimating];
-    
+    [self.view addSubview:self.activityIndicator];
+    [self.activityIndicator setIndicatorView:@"come on baby!"];
+    [self.activityIndicator startAnimating];
+    self.activityIndicator.hidden = NO;
+    isHidden = NO;
+   
 //操作队列
-    
     NSOperationQueue *operationQueue = [[NSOperationQueue alloc]init];
-    
 //设置最大的操作数
     [operationQueue setMaxConcurrentOperationCount:1];
 //构建一个操作对象 selector 指定的方法是在另外一个线程中运行的
     NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(runIndicator) object:nil];
     [operationQueue addOperation:operation];
-    
 }
 
 - (void) runProgress {
@@ -162,7 +157,8 @@
 
 - (void) runIndicator {
     [NSThread sleepForTimeInterval:3];
-    [activityIndicator stopAnimating];
+
+//    [activityIndicator stopAnimating];
 }
 
 #pragma mark - getters and setters
@@ -247,17 +243,17 @@
         _progressView.progress = .0;
         _progressView.progressTintColor = [UIColor redColor];
         _progressView.trackTintColor = [UIColor clearColor];
-//        _progressView.progressImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"1.png"  ofType:nil] ];
-//        _progressView.trackImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"2.png"  ofType:nil] ];
-//        elf.progressView.frame = CGRectMake(self.progressView.frame.origin.x, self.progressView.frame.origin.y, self.progressView.frame.size.width, 9);
-//        [[_progressView layer]setCornerRadius:10.0f];
-//        [[_progressView layer]setBorderWidth:2.0f];
-//        [[_progressView layer]setMasksToBounds:TRUE];
-//        _progressView.clipsToBounds = YES;
-//        [[_progressView layer]setFrame:CGRectMake(10, 230, SCREEN_WIDTH-20, 80)];
-//        [[_progressView  layer]setBorderColor :[UIColor whiteColor].CGColor];
+
     }
     return _progressView;
+}
+
+- (RAYIndicatorView *)activityIndicator {
+    if (_activityIndicator == nil) {
+        _activityIndicator = [[RAYIndicatorView alloc] initWithFrame:CGRectMake(10, 360, SCREEN_WIDTH-20, 80)];
+    }
+    return _activityIndicator;
+
 }
 
 @end

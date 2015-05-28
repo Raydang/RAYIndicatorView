@@ -10,5 +10,10 @@
 
 @interface RAYIndicatorView : UIView
 
+- (void)setIndicatorView:(NSString *)showMessage;
+
+- (void)startAnimating;
+- (void)stopAnimating;
+//- (BOOL)isAnimating;
 
 @end
